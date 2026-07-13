@@ -1,8 +1,9 @@
-import { Link } from "react-router";
-import "./header.css";
+import { Link } from 'react-router';
+import './header.css';
 
 export function Header({ cart }) {
   let totalQuantity = 0;
+
   cart.forEach((cartItem) => {
     totalQuantity += cartItem.quantity;
   });
@@ -11,8 +12,10 @@ export function Header({ cart }) {
     <div className="header">
       <div className="left-section">
         <Link to="/" className="header-link">
-          <img className="logo" src="images/logo-white.png" />
-          <img className="mobile-logo" src="images/mobile-logo-white.png" />
+          <img className="logo"
+            src="images/logo-white.png" />
+          <img className="mobile-logo"
+            src="images/mobile-logo-white.png" />
         </Link>
       </div>
 
@@ -26,6 +29,7 @@ export function Header({ cart }) {
 
       <div className="right-section">
         <Link className="orders-link header-link" to="/orders">
+
           <span className="orders-text">Orders</span>
         </Link>
 
